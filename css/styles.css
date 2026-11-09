@@ -6,6 +6,71 @@
     font-family: 'Satoshi', sans-serif;
 }
 
+:root{
+    --color-black: #000;
+    --color-white: #fff;
+}
+
 body{
-    background-color: #fff;
+    background-color: var(--color-white);
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Announcement Bar */
+.announcement-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px;
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 14px;
+}
+
+.announcement-bar a{
+    text-decoration: underline;
+    color: var(--color-white);
+    text-underline-offset: 2px;
+}
+
+.announcement-close{
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    right: 100px;
+}
+
+@media(max-width: 768px) {
+
+    .announcement-bar {
+    font-size: 12px;
+    }
+
+    .announcement-close {
+    right: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .announcement-bar {
+    min-height: 34px;
+    padding: 9px 15px;
+    font-size: 12px;
+    }
+
+    .announcement-close{
+        display: none;
+    }
 }
