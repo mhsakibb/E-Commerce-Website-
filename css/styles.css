@@ -271,6 +271,33 @@ body{
         right: 4%;
     }
 
+    /* Navigation Bar */
+    .header-container {
+        gap: 24px;
+        padding-inline: 4%;
+    }
+
+    .header__logo img {
+        width: 120px;
+    }
+
+    .header__nav-list {
+        gap: 18px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+
+    .header__search-form {
+        max-width: 420px;
+        height: 44px;
+    }
+
+    .header__actions {
+        gap: 14px;
+    }
+
 }
 
 
