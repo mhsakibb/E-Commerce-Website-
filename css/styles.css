@@ -9,7 +9,6 @@
 .satoshi{
     font-family: 'Satoshi', sans-serif;
 }
-
 .integral-cf {
     font-family: 'Integral CF', sans-serif;
 }
@@ -18,6 +17,7 @@
 :root{
     --color-black: #000;
     --color-white: #fff;
+    --color-gray: #F0F0F0;
 }
 
 body{
@@ -33,64 +33,310 @@ body{
   cursor: pointer;
 }
 
+
+
+
+
 /* Announcement Bar */
-.announcement-bar{
+/* ---------------------------------------------------------------------------------------------- */
+.announcement-bar {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     min-height: 38px;
-    padding: 9px;
-    background: var(--color-black);
+    padding: 8px 50px;
+    background-color: var(--color-black);
     color: var(--color-white);
-    text-align: center;
-    font-size: 14px;
 }
-
-.announcement-bar a{
-    text-decoration: underline;
+.announcement-bar__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+.announcement-bar__link {
+    margin-left: 3px;
     color: var(--color-white);
+    font-weight: 500;
+    text-decoration: underline;
     text-underline-offset: 2px;
 }
-
-.announcement-close{
+.announcement-bar__link:hover {
+    opacity: 0.8;
+}
+.announcement-bar__close {
     position: absolute;
-    top: 9px;
-    bottom: 9px;
-    right: 100px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
 }
-
-
-/* Header Nav Bar */
-
-
-
-
-
-/* Movile Responce(Max 768) */
-@media(max-width: 768px) {
-
-    /* Announcement Bar */
-    .announcement-bar {
-    font-size: 12px;
-    }
-    .announcement-close {
-    right: 10px;
-    }
+.announcement-bar__close svg {
+    display: block;
+    width: 12px;
+    height: 12px;
 }
 
 
 
 
-/* Movile Responce(Max 390) */
-@media (max-width: 390px) {
+/* Navigation Header */
+/* -------------------------------------------------------------------------------------------- */
 
+.site-header {
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1440px;
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 12px 5%;
+}
+
+
+/* Header Logo */
+.header__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.header__logo img {
+    display: block;
+    width: 130px;
+    height: auto;
+}
+
+
+/* Mobile Menu Button */
+.header__menu-toggle {
+    display: none;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+.header__menu-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+/* Desktop Navigation */
+.header__navigation {
+    display: flex;
+    align-items: center;
+}
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+.header__nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--color-black);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
+}
+.header__nav-link:hover {
+    opacity: 0.6;
+}
+
+
+/* Shop Dropdown Arrow */
+.header__nav-link--dropdown::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: 1.5px solid var(--color-black);
+    border-bottom: 1.5px solid var(--color-black);
+    transform: rotate(45deg);
+    margin-top: -4px;
+}
+
+
+/* Desktop Search Form */
+.header__search-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    max-width: 577px;
+    min-width: 150px;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 62px;
+    background-color: var(--color-gray);
+}
+.header__search-submit {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+.header__search-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.header__search-form input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-black);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.header__search-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+.header__search-form input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+
+/* Header Action Icon */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+.header__action {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.header__action-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* Mobile Search - Hidden by Default */
+.header__mobile-search {
+    display: none;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+
+
+/* Large Devices - 1200px */
+@media (max-width: 1200px) {
+    /* Announcement Bar */
+    .announcement-bar__close {
+        right: 4%;
+    }
+
+}
+
+
+
+
+/* Medium Devices - 992px */
+@media (max-width: 992px) {
     /* Announcement Bar */
     .announcement-bar {
-    min-height: 34px;
-    padding: 9px 15px;
+        min-height: 36px;
     }
-    .announcement-close{
-        display: none;
+    .announcement-bar__close {
+        right: 3%;
     }
+
+}
+
+
+
+
+/* Tablets - 768px */
+@media (max-width: 768px) {
+    /* Announcement Bar */
+    .announcement-bar {
+        min-height: 34px;
+        padding: 7px 40px;
+    }
+    .announcement-bar__text {
+        font-size: 12px;
+    }
+    .announcement-bar__close {
+        right: 3%;
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+
+
+
+/* Mobile Devices - 576px */
+@media (max-width: 576px) {
+    /* Announcement Bar */
+    .announcement-bar {
+        min-height: 32px;
+        padding: 6px 30px;
+    }
+
+    .announcement-bar__text {
+        font-size: 10px;
+    }
+
+    .announcement-bar__link {
+        margin-left: 2px;
+    }
+
+    .announcement-bar__close {
+        right: 12px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .announcement-bar__close svg {
+        width: 10px;
+        height: 10px;
+    }
+
 }

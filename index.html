@@ -1,53 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shopCo</title>
 
     <!-- Fonts -->
-     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
 
-     <link href="https://db.onlinewebfonts.com/c/e5cf4323214de97c3428d64ece016410?family=Integral+CF" rel="stylesheet">
-
+    <link
+      href="https://db.onlinewebfonts.com/c/e5cf4323214de97c3428d64ece016410?family=Integral+CF"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
     <!-- Announcement Bar -->
-    <Section class="announcement-bar satoshi">
-            <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
-            <button class="icon-button announcement-close" type="button" aria-label="Close announcement"><img src="assets/icons/close.svg" alt="Close"></button>
-    </Section>
+    <section class="announcement-bar">
+      <p class="announcement-bar__text satoshi">Sign up and get 20% off to your first order.
+        <a href="#newsletter" class="announcement-bar__link"> Sign Up Now </a>
+      </p>
+
+      <button class="icon-button announcement-bar__close" type="button" aria-label="Close announcement">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.8532 11.5274C13.0293 11.7035 13.1283 11.9424 13.1283 12.1915C13.1283 12.4405 13.0293 12.6794 12.8532 12.8555C12.6771 13.0317 12.4382 13.1306 12.1891 13.1306C11.9401 13.1306 11.7012 13.0317 11.5251 12.8555L6.56491 7.89381L1.60319 12.854C1.42707 13.0301 1.1882 13.129 0.939126 13.129C0.690054 13.129 0.451184 13.0301 0.275064 12.854C0.0989435 12.6778 3.71146e-09 12.439 0 12.1899C-3.71146e-09 11.9408 0.0989435 11.702 0.275064 11.5258L5.23678 6.56569L0.276626 1.60397C0.100506 1.42785 0.00156253 1.18898 0.00156254 0.939907C0.00156254 0.690836 0.100506 0.451965 0.276626 0.275845C0.452746 0.0997246 0.691617 0.000781121 0.940688 0.000781119C1.18976 0.000781116 1.42863 0.0997246 1.60475 0.275845L6.56491 5.23756L11.5266 0.275063C11.7027 0.0989432 11.9416 -4.14954e-09 12.1907 0C12.4398 4.14954e-09 12.6786 0.0989432 12.8547 0.275063C13.0309 0.451184 13.1298 0.690054 13.1298 0.939126C13.1298 1.1882 13.0309 1.42707 12.8547 1.60319L7.89303 6.56569L12.8532 11.5274Z" fill="white"/>
+        </svg>
+      </button>
+    </section>
 
 
-    <!-- Navigation Bar -->
-     <nav class="nav-bar">
-        <div class="nav-inner">
-            <button class="icon-button nav-menu"><img src="assets/icons/menu.svg"></button>
 
-            <a class="integral-cf" href="index.html" >SHOP.CO</a>
 
-            <div class="navigation">
-                <a href="#">Shop<img src="assets/icons/chevron-down.svg"></a>
-                <a href="#">On Sale</a>
-                <a href="#">New Arrivals</a>
-                <a href="#">Brands</a>
-            </div>
 
-            <form action="">
-                <button class="icon-button"><img src="assets/icons/search.svg"></button>
-                <input type="text" placeholder="Search for products...">
+    <!-- Navigation / Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- Mobile Menu Icon -->
+            <button class="icon-button header__menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation">
+
+                <!-- nav-menu-icon.svg -->
+                <img src="assets/icons/menu.svg" alt="" class="header__menu-icon">
+            </button>
+
+
+            <!-- SHOP.CO Logo -->
+            <a href="#" class="header__logo" aria-label="SHOP.CO Home">
+                <!-- shopco-logo.svg -->
+                <img src="assets/logos/SHOP.CO.svg" alt="SHOP.CO">
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="header__navigation" id="main-navigation">
+
+                <ul class="header__nav-list">
+                    <li><a href="#shop" class="header__nav-link header__nav-link--dropdown">Shop</a></li>
+                    <li><a href="#on-sale" class="header__nav-link">On Sale</a></li>
+                    <li><a href="#new-arrivals" class="header__nav-link">New Arrivals</a></li>
+                    <li><a href="#brands" class="header__nav-link">Brands</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!-- Desktop Search Form -->
+            <form action="#" method="get" class="header__search-form">
+
+                <button type="submit" class="icon-button header__search-submit" aria-label="Search">
+                    <!-- search.svg -->
+                    <img src="assets/icons/search.svg" alt="" class="header__search-icon">
+                </button>
+
+                <input type="search"
+                    name="search"
+                    placeholder="Search for products..."
+                    aria-label="Search for products">
+
             </form>
 
-            <div>
-                <button class="icon-button"><img src="assets/icons/search.svg"></button>
-                <button class="icon-button"><img src="assets/icons/cart.svg"></button>
-                <button class="icon-button"><img src="assets/icons/user.svg"></button>
-            </div>
-        </div>
-     </nav>
 
-</body>
+            <!-- Header Action Icons -->
+            <div class="header__actions">
+
+                <!-- Mobile Search Icon -->
+                <button class="icon-button header__mobile-search" type="button" aria-label="Open search">
+                    <!-- search.svg -->
+                    <img src="assets/icons/search.svg" alt="" class="header__action-icon">
+                </button>
+
+
+                <!-- Shopping Cart Icon -->
+                <a href="#cart" class="icon-button header__action" aria-label="Shopping cart">
+                    <!-- cart.svg -->
+                    <img src="assets/icons/cart.svg" alt="" class="header__action-icon">
+                </a>
+
+
+                <!-- User Account Icon -->
+                <a href="#account" class="icon-button header__action" aria-label="User account">
+                    <!-- user.svg -->
+                    <img src="assets/icons/user.svg" alt="" class="header__action-icon">
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+  </body>
 </html>
