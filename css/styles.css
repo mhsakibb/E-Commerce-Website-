@@ -3,8 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Fonts */
+.satoshi{
     font-family: 'Satoshi', sans-serif;
 }
+
+.integral-cf {
+    font-family: 'Integral CF', sans-serif;
+}
+
 
 :root{
     --color-black: #000;
@@ -51,25 +60,36 @@ body{
     right: 100px;
 }
 
+
+/* Header Nav Bar */
+
+
+
+
+
+/* Movile Responce(Max 768) */
 @media(max-width: 768px) {
 
+    /* Announcement Bar */
     .announcement-bar {
     font-size: 12px;
     }
-
     .announcement-close {
     right: 10px;
     }
 }
 
+
+
+
+/* Movile Responce(Max 390) */
 @media (max-width: 390px) {
 
+    /* Announcement Bar */
     .announcement-bar {
     min-height: 34px;
     padding: 9px 15px;
-    font-size: 12px;
     }
-
     .announcement-close{
         display: none;
     }
