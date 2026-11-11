@@ -430,4 +430,42 @@ body{
         height: 10px;
     }
 
+
+
+    /* Navigation Bar */
+    .header-container {
+        min-height: 56px;
+        gap: 12px;
+        padding-inline: 16px;
+    }
+
+    .header__logo img {
+        width: 100px;
+    }
+
+    .header__menu-toggle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__menu-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__actions {
+        gap: 12px;
+    }
+
+    .header__action,
+    .header__mobile-search {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__action-icon {
+        width: 20px;
+        height: 20px;
+    }
+
 }
