@@ -303,6 +303,7 @@ body{
 
 
 
+
 /* Medium Devices - 992px */
 @media (max-width: 992px) {
     /* Announcement Bar */
@@ -311,6 +312,42 @@ body{
     }
     .announcement-bar__close {
         right: 3%;
+    }
+
+
+
+
+    /* Navigation Bar */
+    .header-container {
+        gap: 20px;
+        min-height: 64px;
+        padding-inline: 4%;
+    }
+
+    /* Show Hamburger Menu */
+    .header__menu-toggle {
+        display: inline-grid;
+    }
+
+    /* Hide Desktop Navigation */
+    .header__navigation {
+        display: none;
+    }
+
+    /* Hide Desktop Search Form */
+    .header__search-form {
+        display: none;
+    }
+
+    /* Show Mobile Search Icon */
+    .header__mobile-search {
+        display: inline-grid;
+    }
+
+    /* Keep Cart and User Icons Visible */
+    .header__actions {
+        margin-left: auto;
+        gap: 16px;
     }
 
 }
@@ -332,6 +369,33 @@ body{
         right: 3%;
         width: 18px;
         height: 18px;
+    }
+
+
+    /* Navigation Bar */
+    .header-container {
+        min-height: 60px;
+        gap: 16px;
+        padding-inline: 3%;
+    }
+
+    .header__logo img {
+        width: 115px;
+    }
+
+    .header__menu-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .header__actions {
+        gap: 14px;
+    }
+
+    .header__action-icon,
+    .header__mobile-search {
+        width: 21px;
+        height: 21px;
     }
 
 }
