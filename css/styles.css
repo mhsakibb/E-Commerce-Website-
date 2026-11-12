@@ -407,7 +407,7 @@ body{
 
 
 /* Responsive Design */
-
+/* ====================================================================================================== */
 
 
 /* Large Devices - 1200px */
@@ -443,6 +443,50 @@ body{
     .header__actions {
         gap: 14px;
     }
+
+
+    
+    /* Hero Section */
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+
+        padding: 45px 4% 0;
+        gap: 12px;
+    }
+
+    .hero__title {
+        font-size: clamp(38px, 4.4vw, 52px);
+    }
+
+    .hero__description {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .hero__button {
+        width: 190px;
+        height: 48px;
+        margin-top: 24px;
+    }
+
+    .hero__stats {
+        gap: 12px;
+        margin-top: 34px;
+    }
+
+    .hero__stat-number {
+        font-size: 29px;
+    }
+
+    .hero__stat-text {
+        font-size: 12px;
+    }
+
+    .hero__visual {
+        min-height: 430px;
+        padding-inline: 28px;
+    }
+
 
 }
 
