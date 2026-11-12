@@ -252,6 +252,152 @@ body{
 
 
 
+/* Hero Section */
+/* ----------------------------------------------------------------------------------------------- */
+
+.hero-section {
+    width: 100%;
+    background-color: var(--color-gray);
+    overflow: hidden;
+}
+.hero-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 5% 0;
+    gap: 20px;
+}
+
+
+/* Hero Content */
+.hero__content {
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 45px;
+}
+.hero__title {
+    max-width: 580px;
+    font-size: clamp(40px, 4.5vw, 64px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+.hero__description {
+    max-width: 545px;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* Shop Now Button*/
+.hero__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 52px;
+    margin-top: 28px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 62px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+.hero__button:hover {
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+
+/* Hero Statestics */
+.hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 20px;
+    margin-top: 42px;
+}
+.hero__stat {
+    min-width: 0;
+}
+.hero__stat-number {
+    font-size: clamp(23px, 2.5vw, 38px);
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: var(--color-black);
+}
+
+.hero__stat-text {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* Hero visual and Models */
+.hero__visual {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    padding: 0 35px;
+}
+.hero__models {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+    max-height: 540px;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+
+/* Star Decoration */
+.hero__star {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+.hero__star--large {
+    width: clamp(45px, 6vw, 90px);
+    height: auto;
+    top: 12%;
+    right: 2%;
+}
+.hero__star--small {
+    width: clamp(25px, 3.5vw, 50px);
+    height: auto;
+
+    top: 38%;
+    left: 2%;
+}
+
+
+
 
 
 
