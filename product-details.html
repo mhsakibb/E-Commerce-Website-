@@ -120,6 +120,335 @@
 
 
 
+    <!-- Product Breadcrumb -->
+
+    <section class="product-breadcrumb-section">
+
+        <nav class="product-breadcrumb satoshi"
+            aria-label="Breadcrumb">
+
+            <a href="#">Home</a>
+
+            <span class="breadcrumb__separator"></span>
+
+            <a href="#">Shop</a>
+
+            <span class="breadcrumb__separator"></span>
+
+            <a href="#">Men</a>
+
+            <span class="breadcrumb__separator"></span>
+
+            <span class="breadcrumb__current" aria-current="page">
+                T-shirts
+            </span>
+
+        </nav>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Product Overview -->
+
+    <section class="product-overview-section">
+
+        <div class="product-overview-container">
+
+
+            <!-- Product Image Galary -->
+
+            <div class="product-gallery">
+
+                <!-- Main Product Image -->
+
+                <div class="product-gallery__main">
+
+                    <img
+                        src="assets/images/one-life-graphic-tshirt-front.png"
+                        alt="One Life Graphic T-shirt front view"
+                        class="product-gallery__main-image"
+                        id="main-product-image">
+
+                </div>
+
+
+                <!-- Product Thumbnails -->
+
+                <div class="product-gallery__thumbnails">
+
+                    <!-- Front View -->
+                    <button type="button"
+                            class="product-gallery__thumbnail active"
+                            data-image="assets/images/one-life-graphic-tshirt-front.png"
+                            aria-label="Show front view"
+                            aria-pressed="true">
+
+                        <img
+                            src="assets/images/one-life-graphic-tshirt-front.png"
+                            alt="Front view">
+
+                    </button>
+
+
+                    <!-- Back View -->
+                    <button type="button"
+                            class="product-gallery__thumbnail"
+                            data-image="assets/images/one-life-graphic-tshirt-back.png"
+                            aria-label="Show back view"
+                            aria-pressed="false">
+
+                        <img
+                            src="assets/images/one-life-graphic-tshirt-back.png"
+                            alt="Back view">
+
+                    </button>
+
+
+                    <!-- Model View -->
+                    <button type="button"
+                            class="product-gallery__thumbnail"
+                            data-image="assets/images/one-life-graphic-tshirt-model.png"
+                            aria-label="Show model view"
+                            aria-pressed="false">
+
+                        <img
+                            src="assets/images/one-life-graphic-tshirt-model.png"
+                            alt="T-shirt worn by a model">
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product Information -->
+
+            <div class="product-information">
+
+
+                <!-- Product Title -->
+
+                <h1 class="product-information__title integral-cf">
+                    One Life Graphic T-shirt
+                </h1>
+
+
+                <!-- Product Rating -->
+
+                <div class="product-information__rating">
+
+                    <div class="product-information__stars"
+                        role="img"
+                        aria-label="Rated 4.5 out of 5">
+
+                        <img src="assets/icons/star.svg" alt="">
+                        <img src="assets/icons/star.svg" alt="">
+                        <img src="assets/icons/star.svg" alt="">
+                        <img src="assets/icons/star.svg" alt="">
+
+                        <span class="product-information__half-star">
+                            <img src="assets/icons/star.svg" alt="">
+                        </span>
+
+                    </div>
+
+                    <span class="product-information__rating-value satoshi">
+                        4.5/5
+                    </span>
+
+                </div>
+
+
+                <!-- Product Price -->
+
+                <div class="product-information__price satoshi">
+
+                    <span class="product-information__current-price">
+                        $260
+                    </span>
+
+                    <del class="product-information__old-price">
+                        $300
+                    </del>
+
+                    <span class="product-information__discount">
+                        -40%
+                    </span>
+
+                </div>
+
+
+                <!-- Product Description -->
+
+                <p class="product-information__description satoshi">
+                    This graphic t-shirt is perfect for any occasion.
+                    Crafted from a soft and breathable fabric, it offers
+                    superior comfort and style.
+                </p>
+
+
+                <div class="product-information__divider"></div>
+
+
+                <!-- Color Selection -->
+
+                <div class="product-options product-options--color">
+
+                    <h2 class="product-options__heading satoshi">
+                        Select Colors
+                    </h2>
+
+                    <div class="product-color-list">
+
+                        <!-- Olive / Brown -->
+                        <button type="button"
+                                class="product-color product-color--olive selected"
+                                aria-label="Olive color"
+                                title="Olive"
+                                aria-pressed="true">
+
+                            <span class="product-color__check"></span>
+
+                        </button>
+
+
+                        <!-- Dark Teal -->
+                        <button type="button"
+                                class="product-color product-color--teal"
+                                aria-label="Dark teal color"
+                                title="Dark Teal"
+                                aria-pressed="false">
+
+                            <span class="product-color__check"></span>
+
+                        </button>
+
+
+                        <!-- Dark Navy -->
+                        <button type="button"
+                                class="product-color product-color--navy"
+                                aria-label="Dark navy color"
+                                title="Dark Navy"
+                                aria-pressed="false">
+
+                            <span class="product-color__check"></span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-information__divider"></div>
+
+
+                <!-- Size Selection -->
+
+                <div class="product-options product-options--size">
+
+                    <h2 class="product-options__heading satoshi">
+                        Choose Size
+                    </h2>
+
+                    <div class="product-size-list">
+
+                        <button type="button"
+                                class="product-size satoshi"
+                                aria-pressed="false">
+                            Small
+                        </button>
+
+                        <button type="button"
+                                class="product-size satoshi"
+                                aria-pressed="false">
+                            Medium
+                        </button>
+
+                        <button type="button"
+                                class="product-size selected satoshi"
+                                aria-pressed="true">
+                            Large
+                        </button>
+
+                        <button type="button"
+                                class="product-size satoshi"
+                                aria-pressed="false">
+                            X-Large
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-information__divider"></div>
+
+
+                <!-- Quantity and add to card -->
+
+                <div class="product-purchase">
+
+                    <!-- Quantity Selector -->
+
+                    <div class="product-quantity">
+
+                        <button type="button"
+                                class="icon-button product-quantity__button"
+                                id="quantity-minus"
+                                aria-label="Decrease quantity">
+
+                            <img src="assets/icons/minus.svg" alt="">
+
+                        </button>
+
+
+                        <span class="product-quantity__value satoshi"
+                            id="product-quantity"
+                            aria-live="polite">
+                            1
+                        </span>
+
+
+                        <button type="button"
+                                class="icon-button product-quantity__button"
+                                id="quantity-plus"
+                                aria-label="Increase quantity">
+
+                            <img src="assets/icons/plus.svg" alt="">
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Add to Cart -->
+
+                    <button type="button"
+                            class="product-add-to-cart satoshi">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
 
 
 
