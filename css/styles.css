@@ -1530,7 +1530,7 @@ body{
 
 
 
-/* Medium Devices - 992px */
+/*--------------- Medium Devices - 992px ---------------*/
 @media (max-width: 992px) {
     /* Announcement Bar */
     .announcement-bar {
@@ -1840,7 +1840,7 @@ body{
 
 
 
-/* Tablets - 768px */
+/*------------------ Tablets - 768px ------------------------*/
 @media (max-width: 768px) {
     /* Announcement Bar */
     .announcement-bar {
@@ -2280,7 +2280,7 @@ body{
 
 
 
-/* Mobile Devices - 576px */
+/*--------------------------- Mobile Devices - 576px --------------------------*/
 @media (max-width: 576px) {
     /* Announcement Bar */
     .announcement-bar {
