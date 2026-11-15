@@ -1266,6 +1266,41 @@ body{
 
 
 
+/* Load More Reviews */
+
+.reviews-load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+}
+.reviews-load-more__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    min-height: 42px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 62px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+.reviews-load-more__button:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+
+
 
 
 
@@ -1915,6 +1950,10 @@ body{
         padding: 18px;
     }
 
+    .reviews-load-more {
+        margin-top: 28px;
+    }
+
 
 
 
@@ -2436,6 +2475,16 @@ body{
     .review-card__date {
         padding-top: 12px;
         font-size: 11px;
+    }
+
+    .reviews-load-more {
+        margin-top: 20px;
+    }
+
+    .reviews-load-more__button {
+        min-width: 145px;
+        min-height: 40px;
+        font-size: 12px;
     }
 
 
