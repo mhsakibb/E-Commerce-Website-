@@ -237,7 +237,6 @@ body{
     object-fit: contain;
 }
 
-
 /* Mobile Search - Hidden by Default */
 .header__mobile-search {
     display: none;
@@ -245,6 +244,63 @@ body{
     height: 24px;
     flex-shrink: 0;
 }
+
+
+
+
+
+
+
+/* Category Breadcrumb */
+/* ------------------------------------------------------------------------------------------------------------ */
+.category-breadcrumb-section {
+    width: 100%;
+    padding: 22px 5% 20px;
+    background-color: var(--color-white);
+}
+.category-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.category-breadcrumb a,
+.category-breadcrumb__current {
+    color: rgba(0, 0, 0, 0.55);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.category-breadcrumb a {
+    transition: color 0.2s ease;
+}
+.category-breadcrumb a:hover {
+    color: var(--color-black);
+}
+.category-breadcrumb__current {
+    color: var(--color-black);
+}
+
+/* Breadcrumb Chevron */
+.category-breadcrumb__separator {
+    display: block;
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
 
 
 
@@ -595,6 +651,10 @@ body{
 
 
 
+    /* Category Breadcrumb section */
+    .category-breadcrumb-section {
+        padding-inline: 4%;
+    }
 
 
 
@@ -704,6 +764,10 @@ body{
 
 
 
+    /*---- Category and Breadcrumb section ------*/
+    .category-breadcrumb-section {
+        padding: 20px 3% 18px;
+    }
 
 
 
@@ -815,6 +879,19 @@ body{
 
 
 
+    /*---- Category Breadcrumb section -----*/
+    .category-breadcrumb-section {
+        padding: 18px 4%;
+    }
+
+    .category-breadcrumb {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+
+
+
 
 
 
@@ -919,7 +996,7 @@ body{
 
 
 
-/* Mobile Devices - 576px */
+/*-------------------------- Mobile Devices - 576px ---------------------------------*/
 @media (max-width: 576px) {
     /*----- Announcement Bar -------*/
     .announcement-bar {
@@ -986,6 +1063,22 @@ body{
 
 
 
+
+
+    /* Category Breadcrumb Section */
+    .category-breadcrumb-section {
+        padding: 17px 16px;
+    }
+
+    .category-breadcrumb {
+        gap: 9px;
+        font-size: 12px;
+    }
+
+    .category-breadcrumb__separator {
+        width: 6px;
+        height: 6px;
+    }
 
 
 
