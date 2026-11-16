@@ -1424,12 +1424,25 @@ body{
 
 
 
-    /* Category Breadcrumb section */
+    /*----- Category Breadcrumb section -----*/
     .category-breadcrumb-section {
         padding-inline: 4%;
     }
 
 
+
+    /*------- Category Product Grid -------*/
+    .category-product-grid {
+        gap: 24px 16px;
+    }
+
+    .category-product-card__name {
+        font-size: 14px;
+    }
+
+    .category-product-card__current-price {
+        font-size: 18px;
+    }
 
 
 
@@ -1541,6 +1554,58 @@ body{
     .category-breadcrumb-section {
         padding: 20px 3% 18px;
     }
+
+
+
+
+
+    /*------------ Category Product Grid -------------*/
+    .category-product-grid {
+        gap: 22px 14px;
+    }
+
+    .category-product-card__info {
+        gap: 6px;
+        padding-top: 9px;
+    }
+
+    .category-product-card__name {
+        font-size: 13px;
+    }
+
+    .category-product-card__stars > img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .category-product-card__half-star {
+        width: 6.5px;
+        height: 13px;
+    }
+
+    .category-product-card__half-star img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .category-product-card__rating-value {
+        font-size: 10px;
+    }
+
+    .category-product-card__current-price {
+        font-size: 17px;
+    }
+
+    .category-product-card__old-price {
+        font-size: 15px;
+    }
+
+    .category-product-card__discount {
+        min-width: 42px;
+        min-height: 20px;
+        font-size: 9px;
+    }
+
 
 
 
@@ -1877,6 +1942,41 @@ body{
 
 
 
+    /*------------ Category Product Grid ----------------*/
+    .category-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 25px 14px;
+    }
+
+    .category-product-card__image {
+        border-radius: 15px;
+    }
+
+    .category-product-card__info {
+        gap: 7px;
+        padding-top: 10px;
+    }
+
+    .category-product-card__name {
+        font-size: 14px;
+    }
+
+    .category-product-card__current-price {
+        font-size: 19px;
+    }
+
+    .category-product-card__old-price {
+        font-size: 16px;
+    }
+
+
+    /* Pagination */
+
+    .category-pagination {
+        margin-top: 30px;
+        padding-top: 18px;
+    }
 
 
 
@@ -2131,6 +2231,128 @@ body{
         width: 18px;
         height: 18px;
     }
+
+
+
+
+
+
+
+    /*--------------- Category Product Grid ----------------------*/
+    .category-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 23px 10px;
+    }
+
+    .category-product-card__image {
+        border-radius: 12px;
+    }
+
+    .category-product-card__info {
+        gap: 6px;
+        padding-top: 8px;
+    }
+
+    .category-product-card__name {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .category-product-card__rating {
+        gap: 5px;
+    }
+
+    .category-product-card__stars {
+        gap: 2px;
+    }
+
+    .category-product-card__stars > img {
+        width: 11px;
+        height: 11px;
+    }
+
+    .category-product-card__half-star {
+        width: 5.5px;
+        height: 11px;
+    }
+
+    .category-product-card__half-star img {
+        width: 11px;
+        height: 11px;
+    }
+
+    .category-product-card__rating-value {
+        font-size: 9px;
+    }
+
+    .category-product-card__price {
+        gap: 5px;
+    }
+
+    .category-product-card__current-price {
+        font-size: 16px;
+    }
+
+    .category-product-card__old-price {
+        font-size: 13px;
+    }
+
+    .category-product-card__discount {
+        min-width: 36px;
+        min-height: 18px;
+        padding: 2px 5px;
+        font-size: 8px;
+    }
+
+
+    /* Pagination - Mobile */
+
+    .category-pagination {
+        gap: 4px;
+        margin-top: 25px;
+        padding-top: 16px;
+    }
+
+    .category-pagination__nav {
+        min-width: 0;
+        min-height: 34px;
+
+        gap: 4px;
+        padding: 6px 7px;
+
+        font-size: 10px;
+    }
+
+    .category-pagination__nav img {
+        width: 11px;
+        height: 11px;
+    }
+
+    .category-pagination__pages {
+        gap: 1px;
+    }
+
+    .category-pagination__page {
+        width: 26px;
+        height: 30px;
+
+        font-size: 11px;
+    }
+
+    .category-pagination__ellipsis {
+        width: 17px;
+        height: 30px;
+
+        font-size: 12px;
+    }
+
+    /* Hide page 3 and page 8 on mobile */
+
+    .category-pagination__desktop-only {
+        display: none;
+    }
+
 
 
 
