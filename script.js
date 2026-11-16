@@ -581,3 +581,287 @@ if (testimonialTrack && testimonialPrev && testimonialNext) {
 
 
 })();
+
+
+
+
+/* ========================================
+CART PAGE FUNCTIONALITY
+======================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Cart Element
+
+    const cartItemsPanel = document.getElementById(
+        "cart-items-panel"
+    );
+
+    const subtotalElement = document.getElementById(
+        "cart-subtotal"
+    );
+
+    const discountElement = document.getElementById(
+        "cart-discount"
+    );
+
+    const deliveryElement = document.getElementById(
+        "cart-delivery"
+    );
+
+    const totalElement = document.getElementById(
+        "cart-total"
+    );
+
+    const emptyCartMessage = document.getElementById(
+        "cart-empty-message"
+    );
+
+    const checkoutButton = document.getElementById(
+        "cart-checkout"
+    );
+
+
+    if (!cartItemsPanel) return;
+
+
+    // Money Formater
+
+    function formatMoney(amount) {
+
+        return "$" + Math.round(amount).toLocaleString("en-US");
+
+    }
+
+
+    // Update Order Summary
+
+    function updateCartSummary() {
+
+        const cartItems = cartItemsPanel.querySelectorAll(
+            "[data-cart-item]"
+        );
+
+        let subtotal = 0;
+
+
+        cartItems.forEach((item) => {
+
+            const price = Number(item.dataset.price);
+
+            const quantityElement = item.querySelector(
+                "[data-quantity-value]"
+            );
+
+            const quantity = Number(
+                quantityElement.textContent
+            );
+
+            subtotal += price * quantity;
+
+        });
+
+
+        // Calculate Discount
+
+        const discount = subtotal > 0
+            ? Math.round(subtotal * 0.20)
+            : 0;
+
+
+        // Fixed Delivery Fee
+
+        const deliveryFee = subtotal > 0 ? 15 : 0;
+
+
+        // Calculate Total
+
+        const total = subtotal - discount + deliveryFee;
+
+
+        // Update UI
+
+        subtotalElement.textContent = formatMoney(subtotal);
+
+        discountElement.textContent = "-" + formatMoney(discount);
+
+        deliveryElement.textContent = formatMoney(deliveryFee);
+
+        totalElement.textContent = formatMoney(total);
+
+
+        // Empty Cart State
+
+        const isEmpty = cartItems.length === 0;
+
+        emptyCartMessage.hidden = !isEmpty;
+
+        checkoutButton.disabled = isEmpty;
+
+
+        // Return Calculated Values
+
+        return {
+            subtotal,
+            discount,
+            deliveryFee,
+            total
+        };
+
+    }
+
+
+    // Quantity and Remove Functionality
+
+    cartItemsPanel.addEventListener("click", (event) => {
+
+
+        // Find Current Cart Item
+
+        const cartItem = event.target.closest(
+            "[data-cart-item]"
+        );
+
+        if (!cartItem) return;
+
+
+        const quantityElement = cartItem.querySelector(
+            "[data-quantity-value]"
+        );
+
+
+        // Increase Quantity
+
+        if (event.target.closest("[data-quantity-plus]")) {
+
+            let quantity = Number(
+                quantityElement.textContent
+            );
+
+            quantity++;
+
+            quantityElement.textContent = quantity;
+
+            updateCartSummary();
+
+        }
+
+
+        // Decrease Quantity
+
+        if (event.target.closest("[data-quantity-minus]")) {
+
+            let quantity = Number(
+                quantityElement.textContent
+            );
+
+            if (quantity > 1) {
+
+                quantity--;
+
+                quantityElement.textContent = quantity;
+
+                updateCartSummary();
+
+            }
+
+        }
+
+
+        // Remove Product
+
+        if (event.target.closest("[data-remove-item]")) {
+
+            cartItem.remove();
+
+            updateCartSummary();
+
+        }
+
+    });
+
+
+    // Fromo Code Form
+
+    const promoForm = document.getElementById("promo-form");
+
+    const promoInput = document.getElementById("promo-code");
+
+    const promoMessage = document.getElementById("promo-message");
+
+
+    function showPromoMessage(message, type) {
+
+        promoMessage.textContent = message;
+
+        promoMessage.hidden = false;
+
+        promoMessage.classList.remove(
+            "is-error",
+            "is-success"
+        );
+
+        promoMessage.classList.add(type);
+
+    }
+
+
+    promoForm?.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const promoCode = promoInput.value.trim();
+
+
+        if (!promoCode) {
+
+            showPromoMessage(
+                "Please enter a promo code.",
+                "is-error"
+            );
+
+            promoInput.focus();
+
+            return;
+
+        }
+
+
+        /*
+         * Promo code validation will be connected
+         * when the actual promo code rules are defined.
+         */
+
+        showPromoMessage(
+            "Promo code validation is not connected yet.",
+            "is-error"
+        );
+
+    });
+
+
+    // Clear promo feedback when typing
+
+    promoInput?.addEventListener("input", () => {
+
+        promoMessage.hidden = true;
+
+    });
+
+
+    // Checkout Navigation
+
+    checkoutButton?.addEventListener("click", () => {
+
+        if (checkoutButton.disabled) return;
+
+        window.location.href = "checkout.html";
+
+    });
+
+
+    // Initial Cart Calculation
+
+    updateCartSummary();
+
+});
