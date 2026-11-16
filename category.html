@@ -142,6 +142,477 @@
 
 
 
+    <!-- Category Main Layout -->
+
+    <section class="category-main-section">
+
+        <div class="category-main-container">
+
+            <!-- Filter sidebar/Mobile Drawer -->
+            <aside class="category-filter"
+                id="category-filter"
+                aria-label="Product filters"
+                aria-hidden="false">
+
+
+                <!-- Filter Header -->
+
+                <div class="category-filter__header">
+
+                    <h2 class="category-filter__title satoshi">
+                        Filters
+                    </h2>
+
+                    <button type="button"
+                            class="icon-button category-filter__settings"
+                            aria-label="Filter settings">
+
+                        <img src="assets/icons/filter.svg" alt="">
+
+                    </button>
+
+
+                    <!-- Mobile Close Button -->
+
+                    <button type="button"
+                            class="icon-button category-filter__close"
+                            id="close-filter-drawer"
+                            aria-label="Close filters">
+
+                        <img src="assets/icons/close-black.svg" alt="">
+
+                    </button>
+
+                </div>
+
+
+                <!-- Category Options -->
+
+                <div class="category-filter__categories">
+
+                    <a href="#t-shirts" class="filter-category-link satoshi">
+                        T-shirts
+                        <span></span>
+                    </a>
+
+                    <a href="#shorts" class="filter-category-link satoshi">
+                        Shorts
+                        <span></span>
+                    </a>
+
+                    <a href="#shirts" class="filter-category-link satoshi">
+                        Shirts
+                        <span></span>
+                    </a>
+
+                    <a href="#hoodie" class="filter-category-link satoshi">
+                        Hoodie
+                        <span></span>
+                    </a>
+
+                    <a href="#jeans" class="filter-category-link satoshi">
+                        Jeans
+                        <span></span>
+                    </a>
+
+                </div>
+
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+
+                    <button type="button"
+                            class="filter-group__header satoshi"
+                            aria-expanded="true"
+                            aria-controls="filter-price-content">
+
+                        Price
+
+                        <span class="filter-group__chevron"></span>
+
+                    </button>
+
+
+                    <div class="filter-group__content"
+                        id="filter-price-content">
+
+
+                        <!-- Price Range Slider -->
+
+                        <div class="filter-price__slider">
+
+                            <div class="filter-price__track"></div>
+
+                            <div class="filter-price__range"
+                                id="price-range-fill"></div>
+
+                            <input type="range"
+                                class="filter-price__input"
+                                id="price-min"
+                                min="50"
+                                max="200"
+                                value="50"
+                                step="5"
+                                aria-label="Minimum price">
+
+                            <input type="range"
+                                class="filter-price__input"
+                                id="price-max"
+                                min="50"
+                                max="200"
+                                value="200"
+                                step="5"
+                                aria-label="Maximum price">
+
+                        </div>
+
+
+                        <!-- Price Labels -->
+
+                        <div class="filter-price__values satoshi">
+
+                            <span id="min-price-label">$50</span>
+
+                            <span id="max-price-label">$200</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Color Filter -->
+
+                <div class="filter-group">
+
+                    <button type="button"
+                            class="filter-group__header satoshi"
+                            aria-expanded="true"
+                            aria-controls="filter-colors-content">
+
+                        Colors
+
+                        <span class="filter-group__chevron"></span>
+
+                    </button>
+
+
+                    <div class="filter-group__content"
+                        id="filter-colors-content">
+
+                        <div class="filter-colors">
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--green"
+                                    data-filter-color="Green"
+                                    aria-label="Green"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--red"
+                                    data-filter-color="Red"
+                                    aria-label="Red"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--yellow"
+                                    data-filter-color="Yellow"
+                                    aria-label="Yellow"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--orange"
+                                    data-filter-color="Orange"
+                                    aria-label="Orange"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--cyan"
+                                    data-filter-color="Cyan"
+                                    aria-label="Cyan"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--blue selected"
+                                    data-filter-color="Blue"
+                                    aria-label="Blue"
+                                    aria-pressed="true">
+
+                                <span class="filter-color__check"></span>
+
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--purple"
+                                    data-filter-color="Purple"
+                                    aria-label="Purple"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--pink"
+                                    data-filter-color="Pink"
+                                    aria-label="Pink"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--white"
+                                    data-filter-color="White"
+                                    aria-label="White"
+                                    aria-pressed="false">
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-color filter-color--black"
+                                    data-filter-color="Black"
+                                    aria-label="Black"
+                                    aria-pressed="false">
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Size Filter -->
+
+                <div class="filter-group">
+
+                    <button type="button"
+                            class="filter-group__header satoshi"
+                            aria-expanded="true"
+                            aria-controls="filter-size-content">
+
+                        Size
+
+                        <span class="filter-group__chevron"></span>
+
+                    </button>
+
+
+                    <div class="filter-group__content"
+                        id="filter-size-content">
+
+                        <div class="filter-sizes">
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="XX-Small"
+                                    aria-pressed="false">
+                                XX-Small
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="X-Small"
+                                    aria-pressed="false">
+                                X-Small
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="Small"
+                                    aria-pressed="false">
+                                Small
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="Medium"
+                                    aria-pressed="false">
+                                Medium
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size selected satoshi"
+                                    data-filter-size="Large"
+                                    aria-pressed="true">
+                                Large
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="X-Large"
+                                    aria-pressed="false">
+                                X-Large
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="XX-Large"
+                                    aria-pressed="false">
+                                XX-Large
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="3X-Large"
+                                    aria-pressed="false">
+                                3X-Large
+                            </button>
+
+
+                            <button type="button"
+                                    class="filter-size satoshi"
+                                    data-filter-size="4X-Large"
+                                    aria-pressed="false">
+                                4X-Large
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dress Style Filter -->
+
+                <div class="filter-group">
+
+                    <button type="button"
+                            class="filter-group__header satoshi"
+                            aria-expanded="true"
+                            aria-controls="filter-dress-content">
+
+                        Dress Style
+
+                        <span class="filter-group__chevron"></span>
+
+                    </button>
+
+
+                    <div class="filter-group__content" id="filter-dress-content">
+
+                        <div class="filter-dress-styles">
+
+                            <a href="#casual" class="filter-category-link satoshi">Casual<span></span></a>
+                            <a href="#formal" class="filter-category-link satoshi">Formal<span></span></a>
+                            <a href="#party" class="filter-category-link satoshi">Party<span></span></a>
+                            <a href="#gym" class="filter-category-link satoshi">Gym<span></span></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Apply Filter -->
+
+                <button type="button"
+                        class="category-filter__apply satoshi"
+                        id="apply-category-filter">
+
+                    Apply Filter
+
+                </button>
+
+
+            </aside>
+
+
+            <!-- Mobile Overlay -->
+
+            <button type="button"
+                    class="filter-drawer-overlay"
+                    id="filter-drawer-overlay"
+                    aria-label="Close filter panel"
+                    tabindex="-1">
+            </button>
+
+
+            <!-- Category Product Area -->
+
+            <div class="category-products">
+
+                <!-- Category Toolbar -->
+                <div class="category-toolbar">
+
+                    <!-- Category Heading -->
+                    <div class="category-toolbar__heading">
+                        <h1 class="category-toolbar__title satoshi">Casual</h1>
+                        <p class="category-toolbar__count satoshi">Showing 1-10 of 100 Products</p>
+                    </div>
+
+
+                    <!-- Desktop Sorting + Mobile Filter -->
+
+                    <div class="category-toolbar__actions">
+
+                        <div class="category-sort satoshi">
+
+                            <span>Sort by:</span>
+
+                            <select name="sort" id="category-sort" aria-label="Sort products">
+
+                                <option value="popular">Most Popular</option>
+                                <option value="latest">Latest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Mobile Filter Trigger -->
+
+                        <button type="button"
+                                class="icon-button category-mobile-filter"
+                                id="open-filter-drawer"
+                                aria-label="Open filters"
+                                aria-controls="category-filter"
+                                aria-expanded="false">
+
+                            <img src="assets/icons/filter.svg" alt="">
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!--  -->
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 
 
 
