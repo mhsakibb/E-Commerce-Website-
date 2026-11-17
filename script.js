@@ -1,3 +1,121 @@
+// Header Mobile Navigation
+
+(() => {
+
+    const menuButton = document.querySelector(
+        ".header__menu-toggle"
+    );
+
+    const navigation = document.getElementById(
+        "main-navigation"
+    );
+
+    const menuIcon = menuButton?.querySelector(
+        ".header__menu-icon"
+    );
+
+
+    // Stop if header elements are unavailable
+    if (!menuButton || !navigation) return;
+
+
+    // Icon paths
+    const menuIconPath = "assets/icons/menu.svg";
+    const closeIconPath = "assets/icons/close.svg";
+
+
+    // Open Close Menue
+
+    function toggleNavigation(isOpen) {
+
+        navigation.classList.toggle("is-open", isOpen);
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        // Change Menu Icon
+
+        if (menuIcon) {
+
+            menuIcon.src = isOpen
+                ? closeIconPath
+                : menuIconPath;
+
+        }
+
+    }
+
+
+    // Hamburger Click
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.contains("is-open");
+        toggleNavigation(!isOpen);
+    });
+
+
+    // Close after Navigation link is clicked
+
+    navigation.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            toggleNavigation(false);
+
+        });
+
+    });
+
+
+    // Click Outside to close
+
+    document.addEventListener("click", (event) => {
+
+        const clickedInsideMenu = navigation.contains(event.target);
+
+        const clickedMenuButton = menuButton.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedMenuButton) {
+
+            toggleNavigation(false);
+
+        }
+
+    });
+
+
+    // Escap key to close
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+            toggleNavigation(false);
+        }
+
+    });
+
+
+    // Close on Desktop Resize
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 992) {
+
+            toggleNavigation(false);
+
+        }
+
+    });
+
+
+})();
 
 
 
